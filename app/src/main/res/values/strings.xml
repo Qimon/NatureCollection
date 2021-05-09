@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Nature Collection</string>
+    <!-- Page d'accueil -->
+    <string name="app_acc">Nature Collection</string>
+</resources>
