@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.NatureCollection" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.NatureCollection" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
@@ -13,4 +13,22 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <!-- Créer le composant pour le style par défaut. -->
+    <style name="DefaultTextStyle">
+        <item name="android:textColor">@color/lightGray</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/kanit</item>
+    </style>
+
+    <!-- Créer le composant pour le style des sous-titres. -->
+    <style name="SubTitleTextStyle" parent="DefaultTextStyle">
+        <item name="android:textColor">@color/darkGray</item>
+    </style>
+
+    <!-- Créer le composant pour le style des titres. -->
+    <style name="TitleTextStyle" parent="SubTitleTextStyle">
+        <item name="android:textSize">24sp</item>
+    </style>
+
 </resources>
