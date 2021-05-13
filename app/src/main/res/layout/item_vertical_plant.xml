@@ -18,8 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            android:src="@drawable/trending2"
-            android:contentDescription="@string/plant_img" />
+            android:src="@drawable/trending2" />
 
     </androidx.cardview.widget.CardView>
 
@@ -37,7 +36,7 @@
         android:layout_height="wrap_content"
         android:text="@string/item_plant_name"
         style="@style/SubTitleTextStyle"
-        android:layout_marginStart="@dimen/item_margin"
+        android:layout_marginLeft="@dimen/item_margin"
         app:layout_constraintBottom_toTopOf="@+id/view_separation"
         app:layout_constraintStart_toEndOf="@+id/card_view" />
 
@@ -58,7 +57,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/card_view"
         app:layout_constraintEnd_toEndOf="@+id/view_separation"
         app:layout_constraintTop_toTopOf="@+id/card_view"
-        android:layout_marginEnd="@dimen/default_margin"/>
+        android:layout_marginRight="@dimen/default_margin"/>
 
 
 
