@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "277697519069",
+    "firebase_url": "https://nature-collection-3a40e-default-rtdb.firebaseio.com",
+    "project_id": "nature-collection-3a40e",
+    "storage_bucket": "nature-collection-3a40e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:277697519069:android:6df934fee96a02b576ea34",
+        "android_client_info": {
+          "package_name": "fr.sber.naturecollection"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "277697519069-r93hq6470jup1e8lbuqub2sr08amrmq9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7_Ugy3u8tnSpc6dTZWIFI_SBedgpZT84"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "277697519069-r93hq6470jup1e8lbuqub2sr08amrmq9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
