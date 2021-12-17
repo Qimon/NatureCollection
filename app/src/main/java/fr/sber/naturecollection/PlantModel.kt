@@ -1,5 +1,7 @@
 package fr.sber.naturecollection
 
+
+// Classe Objet Plante
 class PlantModel(
     val id: String = "plant0",
     val name: String = "Tulipe",

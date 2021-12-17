@@ -45,7 +45,7 @@ class PlantAdapter(
         // Instance du repo de la liste de plantes
         val repo: PlantRepository = PlantRepository()
 
-        // Getter des attributs de la liste:
+        // Getter des attributs de la liste (Glide permet de récupérer l'image de la plante depuis son url) :
         Glide.with(context).load(Uri.parse(currentPlant.imageUrl)).into(holder.plantImage)
 
         // Mettre à jour le nom et la description de la plante:
@@ -53,17 +53,14 @@ class PlantAdapter(
         holder.plantDescription?.text = currentPlant.description
 
         // Gestion du like/unlike en fonction de l'attribut isLiked de la plante
-        if (currentPlant.isLiked) {
-            holder.starIcon.setImageResource(R.drawable.ic_like)
-        } else {
-            holder.starIcon.setImageResource(R.drawable.ic_unlike)
-        }
+        if (currentPlant.isLiked) holder.starIcon.setImageResource(R.drawable.ic_like)
+        else holder.starIcon.setImageResource(R.drawable.ic_unlike)
 
         // Rajouter une interaction sur l'étoile
         holder.starIcon.setOnClickListener {
+            // Si le bouton est like, il passe en unlike et vice-versa
             currentPlant.isLiked = !currentPlant.isLiked
-
-            // Mettre à jour le boolean de la plante
+            // Mise à jour de l'objet plante avec cette nouvelle valeur
             repo.updatePlant(currentPlant)
         }
     }
