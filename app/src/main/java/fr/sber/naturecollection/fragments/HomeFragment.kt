@@ -13,20 +13,15 @@ import fr.sber.naturecollection.adapter.PlantAdapter
 import fr.sber.naturecollection.adapter.PlantItemDecoration
 
 class HomeFragment(
-    private val context: MainActivity
-) : Fragment(
-
-) {
+    private val context: MainActivity) : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view: View = inflater?.inflate(R.layout.fragment_home, container, false)
 
-        // Créer une liste de "PlantModel" qui va stocker ces plantes:
+        // Créer une liste de "PlantModel" qui va stocker ces plantes :
         // val plantList: ArrayList<PlantModel> = arrayListOf<PlantModel>()
 
-        // Ajouter un élément dans la liste
-
-
+        // Ajouter un élément dans la liste :
         // En manuel:
         // plantList.add(PlantModel("Rose", "C'est rose", "https://cdn.pixabay.com/photo/2015/04/19/08/32/rose-729509__340.jpg", false))
         // plantList.add(PlantModel("Rododenderon", "C'est beau", "https://cdn.pixabay.com/photo/2016/04/03/19/23/rododendron-1305318__340.jpg", false))
@@ -35,11 +30,14 @@ class HomeFragment(
 
         // Le Horizontal RecyclerView en haut de la page:
         val horizontalRecyclerView: RecyclerView = view.findViewById<RecyclerView>(R.id.horizontal_recycler_view)
+        // Edition de l'adapteur de l'horizontalRecyclerView
         horizontalRecyclerView.adapter = PlantAdapter(context, plantList, R.layout.item_horizontal_plant)
 
         // Le vertical RecyclerView en bas de page:
         val verticalRecyclerView: RecyclerView = view.findViewById<RecyclerView>(R.id.vertical_recycler_view)
+        // Edition de l'adapteur de la verticalRecyclerView
         verticalRecyclerView.adapter = PlantAdapter(context, plantList, R.layout.item_vertical_plant)
+        // 1000 : Décalage permettant la séparation entre toutes les petites image de la RecyclerView
         verticalRecyclerView.addItemDecoration(PlantItemDecoration())
 
         return view

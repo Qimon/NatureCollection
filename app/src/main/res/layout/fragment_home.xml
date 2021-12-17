@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- RecyclerView: Objet front récupérant les éléments d'une liste pour les afficher-->
+    <!-- RecyclerView: Objet front récupérant les éléments d'une liste pour les afficher -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/horizontal_recycler_view"
         android:layout_width="match_parent"

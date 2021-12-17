@@ -9,9 +9,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        // Charger le plantRepository (lié à la BDD)
+        // Charger le plantRepository (lié à la BDD). Une instance de la classe est créée (en singleton)
         val repo: PlantRepository = PlantRepository()
         // Mettre à jour la liste de plantes: Celà met un certains temps, d'où l'implémentation du callBack
+        // 1001 : Le bloc d'instruction à réaliser après le callback
         repo.updateData {
             // Injecter le fragment dans notre boite (fragment_container)
             val transaction: FragmentTransaction = supportFragmentManager.beginTransaction()

@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-
+    <!-- Rectangle contenant l'image de la plante -->
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view"
         android:layout_width="80dp"
@@ -20,9 +20,9 @@
             android:scaleType="centerCrop"
             android:src="@drawable/trending2"
             android:contentDescription="@string/plant_img" />
-
     </androidx.cardview.widget.CardView>
 
+    <!-- Trait pour symétriser le nom et la description de la plante par rapport à l'image (invisible) -->
     <View
         android:id="@+id/view_separation"
         android:layout_width="match_parent"
@@ -31,6 +31,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Nom de la plante :
+    Le dessous matche avec le dessus du trait de séparation
+    La gauche matche avec la droite de l'image -->
     <TextView
         android:id="@+id/name_item"
         android:layout_width="wrap_content"
@@ -41,6 +44,9 @@
         app:layout_constraintBottom_toTopOf="@+id/view_separation"
         app:layout_constraintStart_toEndOf="@+id/card_view" />
 
+    <!-- Description de la plante :
+    Le dessus matche avec le dessous du trait de séparation
+    La gauche matche avec la droite de l'image -->
     <TextView
         android:id="@+id/description_item"
         style="@style/DefaultTextStyle"
@@ -50,6 +56,8 @@
         app:layout_constraintStart_toStartOf="@+id/name_item"
         app:layout_constraintTop_toBottomOf="@+id/view_separation" />
 
+    <!-- Etoile de like de la plante :
+    Elle est alignée par rapport à l'image -->
     <ImageView
         android:id="@+id/star_icon"
         android:layout_width="30dp"
@@ -59,7 +67,4 @@
         app:layout_constraintEnd_toEndOf="@+id/view_separation"
         app:layout_constraintTop_toTopOf="@+id/card_view"
         android:layout_marginEnd="@dimen/default_margin"/>
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
