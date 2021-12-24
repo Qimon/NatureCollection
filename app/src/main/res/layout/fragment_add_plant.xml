@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/default_margin"
+    >
+
+    <!-- Le composant prenant toute la largeur, on peut utiliser un linearLayout (ici dans un Linear layout) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Bouton de chargement de l'image -->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_plant_page_upload_button"
+            android:textColor="@color/white"
+            android:background="@color/green"
+            android:padding="@dimen/default_margin"
+            style="@style/TitleTextStyle" />
+
+        <!-- Image de prévisualisation du chargement
+        le centerCrop permet d'occuper tout l'espace disponible avec l'image par défaut
+        -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/trending3"/>
+
+    </LinearLayout>
+
+    <!-- Champs à compléter du formulaire -->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="@dimen/default_margin"
+        android:hint="@string/add_plant_page_name_input"
+        style="@style/DefaultTextStyle"
+        android:paddingLeft="@dimen/default_margin"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="@dimen/default_margin"
+        android:hint="@string/add_plant_page_description_input"
+        style="@style/DefaultTextStyle"
+        android:paddingLeft="@dimen/default_margin"/>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="@dimen/default_margin"
+        android:entries="@array/add_plant_page_grow_spinner_input"
+        android:paddingLeft="@dimen/default_margin"/>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="@dimen/default_margin"
+        android:entries="@array/add_plant_page_water_spinner_input"
+        android:paddingLeft="@dimen/default_margin"/>
+
+</LinearLayout>

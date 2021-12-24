@@ -9,7 +9,7 @@ import android.widget.TextView
 import com.bumptech.glide.Glide
 import fr.sber.naturecollection.adapter.PlantAdapter
 
-// Classe de gestion de la popup
+// Cette classe est reliée à un ConstraintLayout (plusieurs éléments sont présents sur la même vue).
 class PlantPopup(
     private val adapter: PlantAdapter,
     private val currentPlant : PlantModel
