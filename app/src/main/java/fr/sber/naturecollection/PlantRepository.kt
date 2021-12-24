@@ -39,6 +39,8 @@ class PlantRepository {
                     if (plant != null) {
                         Log.d(TAG,"La liste n'est pas vide")
                         plantList.add(plant)
+                        Log.d(TAG, plant.toString())
+
                     } else {
                         Log.d(TAG,"La liste est vide")
                     }
@@ -56,5 +58,9 @@ class PlantRepository {
     // Mettre à jour un objet plante en BDD
     // .child pour récupérer l'enfant de la db plants
     fun updatePlant(plant: PlantModel) = databaseref.child(plant.id).setValue(plant)
+
+
+    // Supprimer une plante de la bas
+    fun deletePlant(plant: PlantModel) = databaseref.child(plant.id).removeValue()
 
 }
