@@ -8,13 +8,10 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import fr.sber.naturecollection.MainActivity
-import fr.sber.naturecollection.PlantModel
-import fr.sber.naturecollection.PlantRepository
-import fr.sber.naturecollection.R
+import fr.sber.naturecollection.*
 
 class PlantAdapter(
-    private val context: MainActivity,
+    val context: MainActivity,
     private val plantList: List<PlantModel>,
     private val layoutId: Int
     ): RecyclerView.Adapter<PlantAdapter.ViewHolder>() {
@@ -27,7 +24,7 @@ class PlantAdapter(
         val plantName: TextView? = view.findViewById(R.id.name_item)
         val plantDescription: TextView? = view.findViewById(R.id.description_item)
         // Pour le like/unlike, il est présent dans les 2 viewHolder donc pas besoin de gérer les null
-        val starIcon: ImageView = view.findViewById<ImageView>(R.id.star_icon)
+        val starIcon: ImageView? = view.findViewById<ImageView>(R.id.star_icon)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -53,15 +50,22 @@ class PlantAdapter(
         holder.plantDescription?.text = currentPlant.description
 
         // Gestion du like/unlike en fonction de l'attribut isLiked de la plante
-        if (currentPlant.isLiked) holder.starIcon.setImageResource(R.drawable.ic_like)
-        else holder.starIcon.setImageResource(R.drawable.ic_unlike)
+        if (currentPlant.isLiked) holder.starIcon?.setImageResource(R.drawable.ic_like)
+        else holder.starIcon?.setImageResource(R.drawable.ic_unlike)
 
         // Rajouter une interaction sur l'étoile
-        holder.starIcon.setOnClickListener {
+        holder.starIcon?.setOnClickListener {
             // Si le bouton est like, il passe en unlike et vice-versa
             currentPlant.isLiked = !currentPlant.isLiked
             // Mise à jour de l'objet plante avec cette nouvelle valeur
             repo.updatePlant(currentPlant)
+        }
+
+        // Lors du clic sur une plante
+        holder.itemView.setOnClickListener {
+
+            // Afficher la popup
+            PlantPopup(this, currentPlant).show()
         }
     }
 
