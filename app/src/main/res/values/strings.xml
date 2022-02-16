@@ -1,9 +1,15 @@
 <resources>
-    <string name="app_name">Nature Emoi</string>
 
-    <!-- Page d'accueil -->
-    <string name="home_page_title">A decouvrir</string>
-    <string name="home_page_list_plat_section">Dernières plantes</string>
+    <!-- Nom de l'application -->
+    <string name="app_name">Bobaune</string>
+
+    <!-- Rubriques -->
+    <string name="home_page_calendar">Calendrier</string>
+    <string name="home_page_market">Courses</string>
+    <string name="home_page_media">Media</string>
+    <string name="home_page_book">Livres</string>
+    <string name="home_page_animal">Animaux</string>
+    <string name="home_page_plant">Plantes</string>
 
     <!-- Page de Collection -->
     <string name="collection_page_title">Ma collection</string>

@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Main Panel -->
+    <dimen name="default_square_width">160dp</dimen>
+    <!-- Margin -->
+    <dimen name="item_margin">10dp</dimen>
     <dimen name="default_margin">20dp</dimen>
+    <dimen name="fat_margin">80dp</dimen>
+    <!-- Icon -->
+    <dimen name="default_icon_size">40dp</dimen>
+    <!-- Image -->
     <dimen name="default_image_width">150dp</dimen>
     <dimen name="default_image_height">200dp</dimen>
-    <dimen name="item_margin">10dp</dimen>
-    <dimen name="default_icon_size">40dp</dimen>
 </resources>

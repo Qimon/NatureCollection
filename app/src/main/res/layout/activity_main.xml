@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/darkGray"
     tools:context=".MainActivity">
 
     <TextView
@@ -18,19 +18,67 @@
         app:layout_constraintTop_toTopOf="parent"
         style="@style/DefaultTextStyle" />
 
-    <TextView
-        android:id="@+id/home_page_title"
-        style="@style/TitleTextStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/home_page_title"
+    <Button
+        android:id="@+id/calendar_square"
+        android:layout_width="@dimen/default_square_width"
+        android:layout_height="@dimen/default_square_width"
+        android:layout_marginTop="@dimen/fat_margin"
+        android:text="@string/home_page_calendar"
         app:layout_constraintStart_toStartOf="@+id/app_name"
-        app:layout_constraintTop_toBottomOf="@+id/app_name" />
+        app:layout_constraintTop_toBottomOf="@+id/app_name"
+        style="@style/TitleTextStyle"
+        />
 
-    <FrameLayout
-        android:id="@+id/fragment_container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="100dp" />
+    <Button
+        android:id="@+id/market_square"
+        android:layout_width="@dimen/default_square_width"
+        android:layout_height="@dimen/default_square_width"
+        android:layout_marginTop="@dimen/fat_margin"
+        android:text="@string/home_page_market"
+        app:layout_constraintStart_toEndOf="@+id/calendar_square"
+        app:layout_constraintTop_toBottomOf="@+id/app_name"
+        style="@style/TitleTextStyle"
+        />
+
+    <Button
+        android:id="@+id/media_square"
+        android:layout_width="@dimen/default_square_width"
+        android:layout_height="@dimen/default_square_width"
+        android:text="@string/home_page_media"
+        app:layout_constraintStart_toStartOf="@+id/calendar_square"
+        app:layout_constraintStart_toEndOf="@+id/calendar_square"
+        app:layout_constraintTop_toBottomOf="@+id/calendar_square"
+        style="@style/TitleTextStyle"
+        />
+
+    <Button
+        android:id="@+id/book_square"
+        android:layout_width="@dimen/default_square_width"
+        android:layout_height="@dimen/default_square_width"
+        android:text="@string/home_page_book"
+        app:layout_constraintStart_toEndOf="@+id/calendar_square"
+        app:layout_constraintTop_toBottomOf="@+id/market_square"
+        style="@style/TitleTextStyle"
+        />
+
+    <Button
+        android:id="@+id/animal_square"
+        android:layout_width="@dimen/default_square_width"
+        android:layout_height="@dimen/default_square_width"
+        android:text="@string/home_page_animal"
+        app:layout_constraintStart_toStartOf="@+id/media_square"
+        app:layout_constraintTop_toBottomOf="@+id/media_square"
+        style="@style/TitleTextStyle"
+        />
+
+    <Button
+        android:id="@+id/plant_square"
+        android:layout_width="@dimen/default_square_width"
+        android:layout_height="@dimen/default_square_width"
+        android:text="@string/home_page_plant"
+        app:layout_constraintStart_toEndOf="@+id/calendar_square"
+        app:layout_constraintTop_toBottomOf="@+id/book_square"
+        style="@style/TitleTextStyle"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
