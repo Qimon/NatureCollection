@@ -1,8 +1,7 @@
-package fr.sber.naturecollection
+package fr.sber.bobone
 
+import org.junit.Assert.assertEquals
 import org.junit.Test
-
-import org.junit.Assert.*
 
 /**
  * Example local unit test, which will execute on the development machine (host).

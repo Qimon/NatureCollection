@@ -1,9 +1,9 @@
-package fr.sber.naturecollection
+package fr.sber.bobone
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.FragmentTransaction
-import fr.sber.naturecollection.fragments.HomeFragment
+import fr.sber.bobone.fragments.HomeFragment
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

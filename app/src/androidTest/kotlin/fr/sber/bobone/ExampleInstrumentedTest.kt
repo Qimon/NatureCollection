@@ -1,14 +1,10 @@
-package fr.sber.naturecollection
+package fr.sber.bobone
 
 import android.content.Context
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import android.content.ContentValues.TAG
-import android.util.Log
-
 import org.junit.Test
 import org.junit.runner.RunWith
-
 import org.junit.Assert.assertEquals
 
 /**
@@ -22,10 +18,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext: Context = InstrumentationRegistry.getInstrumentation().targetContext
-        val titi: String = appContext.packageResourcePath
-        Log.d(TAG,"###########################################")
-        Log.d(TAG,titi)
-        Log.d(TAG,"###########################################")
-        assertEquals("fr.sber.naturecollection", appContext.packageName)
+        assertEquals("fr.sber.bobone", appContext.packageName)
     }
 }
