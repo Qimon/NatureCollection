@@ -12,6 +12,13 @@ import org.mockito.runners.MockitoJUnitRunner
 @RunWith(MockitoJUnitRunner::class)
 class PlantItemDecorationTest {
 
+    /**
+     * Build Rect Object with wanted parameters
+     *
+     * @param bottomValue is the bottom parameter value to affect to Rect Object
+     * @param topValue is the top, left and right parameters value to affect to Rect Object
+     * @return a Rect Object with parameters defined
+     */
     fun buildRect(bottomValue: Int, topValue: Int): Rect {
         var rectObject: Rect = Rect(0, 0,0,0)
         rectObject.bottom = bottomValue
@@ -19,9 +26,15 @@ class PlantItemDecorationTest {
         return rectObject
     }
 
+    /**
+     * Test if "bottom" parameter "inputRectObject" is well change to 20, calling getItemOffsets method
+     * Assert if top parameter is unchanged
+     *
+     */
     @Test
     fun getItemOffsetsTest() {
 
+        // Prepare Input
         val anyView: View = mock(View::class.java)
         val anyRecyclerView: RecyclerView = mock(RecyclerView::class.java)
         val anyRecyclerViewState: RecyclerView.State = mock(RecyclerView.State::class.java)
