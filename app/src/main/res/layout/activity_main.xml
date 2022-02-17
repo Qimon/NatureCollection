@@ -18,64 +18,77 @@
         app:layout_constraintTop_toTopOf="parent"
         style="@style/DefaultTextStyle" />
 
-    <Button
+    <ImageButton
         android:id="@+id/calendar_square"
+        android:src="@drawable/main_calendar_icon"
         android:layout_width="@dimen/default_square_width"
         android:layout_height="@dimen/default_square_width"
-        android:layout_marginTop="@dimen/fat_margin"
-        android:text="@string/home_page_calendar"
+        android:layout_marginTop="@dimen/default_margin"
+        android:background="@drawable/custom_image_button"
         app:layout_constraintStart_toStartOf="@+id/app_name"
         app:layout_constraintTop_toBottomOf="@+id/app_name"
         style="@style/TitleTextStyle"
         />
 
-    <Button
+    <ImageButton
         android:id="@+id/market_square"
+        android:src="@drawable/main_market_icon"
         android:layout_width="@dimen/default_square_width"
         android:layout_height="@dimen/default_square_width"
-        android:layout_marginTop="@dimen/fat_margin"
-        android:text="@string/home_page_market"
+        android:layout_marginTop="@dimen/default_margin"
+        android:layout_marginLeft="@dimen/default_margin"
+        android:background="@drawable/custom_image_button"
         app:layout_constraintStart_toEndOf="@+id/calendar_square"
         app:layout_constraintTop_toBottomOf="@+id/app_name"
         style="@style/TitleTextStyle"
         />
 
-    <Button
+    <ImageButton
         android:id="@+id/media_square"
+        android:src="@drawable/main_media_icon"
         android:layout_width="@dimen/default_square_width"
         android:layout_height="@dimen/default_square_width"
-        android:text="@string/home_page_media"
+        android:background="@drawable/custom_image_button"
+        android:layout_marginTop="@dimen/default_margin"
         app:layout_constraintStart_toStartOf="@+id/calendar_square"
         app:layout_constraintStart_toEndOf="@+id/calendar_square"
         app:layout_constraintTop_toBottomOf="@+id/calendar_square"
         style="@style/TitleTextStyle"
         />
 
-    <Button
+    <ImageButton
         android:id="@+id/book_square"
+        android:src="@drawable/main_book_icon"
         android:layout_width="@dimen/default_square_width"
         android:layout_height="@dimen/default_square_width"
-        android:text="@string/home_page_book"
+        android:background="@drawable/custom_image_button"
+        android:layout_marginTop="@dimen/default_margin"
+        android:layout_marginLeft="@dimen/default_margin"
         app:layout_constraintStart_toEndOf="@+id/calendar_square"
         app:layout_constraintTop_toBottomOf="@+id/market_square"
         style="@style/TitleTextStyle"
         />
 
-    <Button
+    <ImageButton
         android:id="@+id/animal_square"
+        android:src="@drawable/main_animal_icon"
         android:layout_width="@dimen/default_square_width"
         android:layout_height="@dimen/default_square_width"
-        android:text="@string/home_page_animal"
+        android:background="@drawable/custom_image_button"
+        android:layout_marginTop="@dimen/default_margin"
         app:layout_constraintStart_toStartOf="@+id/media_square"
         app:layout_constraintTop_toBottomOf="@+id/media_square"
         style="@style/TitleTextStyle"
         />
 
-    <Button
+    <ImageButton
         android:id="@+id/plant_square"
+        android:src="@drawable/main_plant_icon"
         android:layout_width="@dimen/default_square_width"
         android:layout_height="@dimen/default_square_width"
-        android:text="@string/home_page_plant"
+        android:background="@drawable/custom_image_button"
+        android:layout_marginTop="@dimen/default_margin"
+        android:layout_marginLeft="@dimen/default_margin"
         app:layout_constraintStart_toEndOf="@+id/calendar_square"
         app:layout_constraintTop_toBottomOf="@+id/book_square"
         style="@style/TitleTextStyle"
