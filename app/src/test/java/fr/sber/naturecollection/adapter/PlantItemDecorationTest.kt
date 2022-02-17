@@ -28,26 +28,30 @@ class PlantItemDecorationTest {
 
     /**
      * Test if "bottom" parameter "inputRectObject" is well change to 20, calling getItemOffsets method
-     * Assert if top parameter is unchanged
+     * Assert if top, left and right parameters are unchanged
      *
      */
     @Test
     fun getItemOffsetsTest() {
 
         // Prepare Input
-        val anyView: View = mock(View::class.java)
-        val anyRecyclerView: RecyclerView = mock(RecyclerView::class.java)
-        val anyRecyclerViewState: RecyclerView.State = mock(RecyclerView.State::class.java)
         val inputRectObject: Rect = buildRect(2, 2)
 
         // Prepare Expected
         val expectedRectObject: Rect = buildRect(20, 2)
 
         // Run function
-        PlantItemDecoration().getItemOffsets(inputRectObject, anyView, anyRecyclerView, anyRecyclerViewState)
+        PlantItemDecoration().getItemOffsets(
+            inputRectObject, 
+            mock(View::class.java), 
+            mock(RecyclerView::class.java), 
+            mock(RecyclerView.State::class.java)
+        )
 
         // Assert Results
         Assert.assertEquals(expectedRectObject.bottom, inputRectObject.bottom)
         Assert.assertEquals(expectedRectObject.top, inputRectObject.top)
+        Assert.assertEquals(expectedRectObject.left, inputRectObject.left)
+        Assert.assertEquals(expectedRectObject.right, inputRectObject.right)
     }
 }
