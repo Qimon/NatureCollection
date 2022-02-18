@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.view.Window
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.annotation.VisibleForTesting
 import com.bumptech.glide.Glide
 import fr.sber.naturecollection.adapter.PlantAdapter
 
@@ -30,15 +29,14 @@ class PlantPopup(
         setupLikeButton()
     }
 
-    @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
-    fun updateLike(likeButton : ImageView) {
+    private fun updateLike(likeButton : ImageView) {
         // Chargement de l'image like/unlike associée à l'attribut isLiked de la classe plante
         if (currentPlant.isLiked) likeButton.setImageResource(R.drawable.ic_like)
         else likeButton.setImageResource(R.drawable.ic_unlike)
     }
 
-    @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
-    fun setupLikeButton() {
+
+    private fun setupLikeButton() {
         // Récupération du bouton like
         val likeButton: ImageView = findViewById<ImageView>(R.id.like_button)
 
@@ -57,8 +55,7 @@ class PlantPopup(
         }
     }
 
-    @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
-    fun setupDeleteButton() {
+    private fun setupDeleteButton() {
         findViewById<ImageView>(R.id.delete_button).setOnClickListener {
             // Supprimer la plante de la base de données
             // Instanciation de la classe Plantrepository()
@@ -70,17 +67,15 @@ class PlantPopup(
         }
     }
 
-    @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
-    fun setupCloseButton() {
-        val closeButton: ImageView = findViewById<ImageView>(R.id.close_button)
-        closeButton.setOnClickListener {
+    private fun setupCloseButton() {
+        var closeButton: ImageView? = findViewById<ImageView>(R.id.close_button)
+        closeButton?.setOnClickListener {
             // Fermeture de la popup :
             dismiss()
         }
     }
 
-    @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
-    fun setupComponents() {
+    private fun setupComponents() {
 
         // Actualiser l'image de la plante courante dans la popup
         val plantImage: ImageView = findViewById<ImageView>(R.id.image_item)
