@@ -72,7 +72,8 @@ class PlantPopup(
 
     @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
     fun setupCloseButton() {
-        findViewById<ImageView>(R.id.close_button).setOnClickListener {
+        val closeButton: ImageView = findViewById<ImageView>(R.id.close_button)
+        closeButton.setOnClickListener {
             // Fermeture de la popup :
             dismiss()
         }

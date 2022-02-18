@@ -23,7 +23,7 @@ class PlantRepository {
         val plantList: ArrayList<PlantModel> = arrayListOf<PlantModel>()
     }
 
-    // 1001 : Le callback permet de laisser la requête se faire avant d'autres instrucion
+    // 1001 : Le callback permet de laisser la requête se faire avant d'autres instructions
     fun updateData(callback: () -> Unit) {
         // Absorption des données récupérées depuis la BDD pour modifications:
         databaseref.addValueEventListener(object: ValueEventListener {
