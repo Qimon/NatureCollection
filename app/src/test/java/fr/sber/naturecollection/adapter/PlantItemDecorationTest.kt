@@ -5,11 +5,8 @@ import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import org.junit.Assert
 import org.junit.Test
-import org.junit.runner.RunWith
 import org.mockito.Mockito.mock
-import org.mockito.runners.MockitoJUnitRunner
 
-@RunWith(MockitoJUnitRunner::class)
 class PlantItemDecorationTest {
 
     /**
@@ -20,7 +17,7 @@ class PlantItemDecorationTest {
      * @return a Rect Object with parameters defined
      */
     fun buildRect(bottomValue: Int, topValue: Int): Rect {
-        var rectObject: Rect = Rect(0, 0,0,0)
+        var rectObject: Rect = Rect(0, 0, 0, 0)
         rectObject.bottom = bottomValue
         rectObject.top = topValue
         return rectObject
@@ -42,9 +39,9 @@ class PlantItemDecorationTest {
 
         // Run function
         PlantItemDecoration().getItemOffsets(
-            inputRectObject, 
-            mock(View::class.java), 
-            mock(RecyclerView::class.java), 
+            inputRectObject,
+            mock(View::class.java),
+            mock(RecyclerView::class.java),
             mock(RecyclerView.State::class.java)
         )
 

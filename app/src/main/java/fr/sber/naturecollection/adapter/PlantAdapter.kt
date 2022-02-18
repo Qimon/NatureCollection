@@ -12,8 +12,8 @@ import fr.sber.naturecollection.*
 
 class PlantAdapter(
     val context: MainActivity,
-    private val plantList: List<PlantModel>,
-    private val layoutId: Int
+    val plantList: List<PlantModel>,
+    val layoutId: Int
     ): RecyclerView.Adapter<PlantAdapter.ViewHolder>() {
 
     // Boite pour ranger tous les composants à contrôler
@@ -28,11 +28,9 @@ class PlantAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view: View = LayoutInflater
-            .from(parent.context)
-            .inflate(layoutId, parent, false)
-
-        return ViewHolder(view)
+        val view: LayoutInflater = LayoutInflater.from(parent.context)
+        val final = view.inflate(layoutId, parent, false)
+        return ViewHolder(final)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
