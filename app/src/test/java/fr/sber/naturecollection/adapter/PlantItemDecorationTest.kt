@@ -3,8 +3,8 @@ package fr.sber.naturecollection.adapter
 import android.graphics.Rect
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
-import org.junit.Assert
-import org.junit.Test
+import org.junit.jupiter.api.Assertions
+import org.junit.jupiter.api.Test
 import org.mockito.Mockito.mock
 
 class PlantItemDecorationTest {
@@ -46,9 +46,9 @@ class PlantItemDecorationTest {
         )
 
         // Assert Results
-        Assert.assertEquals(expectedRectObject.bottom, inputRectObject.bottom)
-        Assert.assertEquals(expectedRectObject.top, inputRectObject.top)
-        Assert.assertEquals(expectedRectObject.left, inputRectObject.left)
-        Assert.assertEquals(expectedRectObject.right, inputRectObject.right)
+        Assertions.assertEquals(expectedRectObject.bottom, inputRectObject.bottom)
+        Assertions.assertEquals(expectedRectObject.top, inputRectObject.top)
+        Assertions.assertEquals(expectedRectObject.left, inputRectObject.left)
+        Assertions.assertEquals(expectedRectObject.right, inputRectObject.right)
     }
 }

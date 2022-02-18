@@ -1,19 +1,14 @@
 package fr.sber.naturecollection.adapter
 
-import android.view.ViewGroup
-import androidx.recyclerview.widget.RecyclerView
 import fr.sber.naturecollection.MainActivity
 import fr.sber.naturecollection.PlantModel
-import org.junit.Assert
-import org.junit.Ignore
-import org.junit.Test
-import org.junit.runner.RunWith
-import org.mockito.Mockito.mock
-import org.mockito.runners.MockitoJUnitRunner
+import org.junit.jupiter.api.Assertions
+import org.junit.jupiter.api.Test
+import org.mockito.Mockito
 
-@RunWith(MockitoJUnitRunner::class)
 class PlantAdapterTest {
 
+    private val MOCK_CONTEXT: MainActivity = Mockito.mock(MainActivity::class.java)
 
     /**
      * Generate some distinct PlantModel only on "id" attribute
@@ -23,46 +18,6 @@ class PlantAdapterTest {
      */
     fun generatePlantModel(id: String): PlantModel {
         return PlantModel(id, "", "", "", "", "", false)
-    }
-
-    /**
-     * Test if
-     *
-     */
-    @Test
-    @Ignore
-    fun onCreateViewHolderTest() {
-
-        // Prepare Input
-        val mockPlantModel: PlantModel = generatePlantModel("1")
-        val plantModelList: List<PlantModel> = listOf<PlantModel>(mockPlantModel)
-        val inputViewGroup = mock(ViewGroup::class.java)
-        val inputViewType: Int = 0
-
-        // Prepare Expected
-        // val expectedViewHolder: RecyclerView.ViewHolder =
-
-        // Run function
-        val outputViewHolder: RecyclerView.ViewHolder = PlantAdapter(
-            MainActivity(),
-            plantModelList,
-            0
-        ).onCreateViewHolder(
-            inputViewGroup,
-            inputViewType
-        )
-
-        // Assert results
-        // Assert.assertEquals(expectedViewHolder, outputViewHolder)
-    }
-
-    /**
-     * Test if
-     *
-     */
-    @Test
-    @Ignore
-    fun onBindViewHolderTest() {
     }
 
     /**
@@ -79,13 +34,13 @@ class PlantAdapterTest {
 
         // Run function
         val inputSize: Int = PlantAdapter(
-            MainActivity(),
+            MOCK_CONTEXT,
             plantModelList,
             0
         ).itemCount
 
         // Assert Results
-        Assert.assertEquals(2, inputSize)
+        Assertions.assertEquals(2, inputSize)
     }
 
 }

@@ -1,7 +1,7 @@
 package fr.sber.naturecollection
 
-import org.junit.Assert
-import org.junit.Test
+import org.junit.jupiter.api.Assertions
+import org.junit.jupiter.api.Test
 
 class PlantModelTest {
 
@@ -19,7 +19,7 @@ class PlantModelTest {
         val outputString: String = PlantModel().toString()
 
         // Assert Results
-        Assert.assertEquals(expectedString, outputString)
+        Assertions.assertEquals(expectedString, outputString)
     }
 
     /**
@@ -47,6 +47,6 @@ class PlantModelTest {
         val outputString: String = inputPlantModel.toString()
 
         // Assert Results
-        Assert.assertEquals(expectedString, outputString)
+        Assertions.assertEquals(expectedString, outputString)
     }
 }
